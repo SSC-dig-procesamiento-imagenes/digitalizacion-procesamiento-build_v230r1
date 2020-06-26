@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>digitalizacion-omr</artifactId>
+	<version>${revision}</version>
+	<packaging>jar</packaging>
+	<name>digitalizacion-omr</name>
+	<description></description>
+
+	<parent>
+		<groupId>mx.com.teclo</groupId>
+		<artifactId>digitalizacion-procesamiento-build</artifactId>
+		<version>${revision}</version>
+		<relativePath>..</relativePath> <!-- lookup parent from repository -->
+	</parent>
+ 
+
+	<dependencies>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-base</artifactId>
+			<version>${revision}</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.mathworks</groupId> -->
+<!-- 			<artifactId>matlab</artifactId> -->
+<!-- 			<version>1.0.0</version> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.mathworks</groupId>
+			<artifactId>matlab32</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.mathworks</groupId>  -->
+<!-- 			<artifactId>matlab</artifactId>  -->
+<!-- 			<version>1.0.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Program Files\MATLAB\R2017a\toolbox\javabuilder\jar\javabuilder.jar</systemPath>  -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.mathworks</groupId>  -->
+<!-- 			<artifactId>matlab32</artifactId>  -->
+<!-- 			<version>1.0.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Program Files (x86)\MATLAB\MATLAB Runtime\v90\toolbox\javabuilder\jar\javabuilder.jar</systemPath>  -->
+<!-- 		</dependency> -->
+<!-- 		<dependency>  -->
+<!-- 			<groupId>com.tecloprocessing</groupId>  -->
+<!-- 			<artifactId>sampletp</artifactId>  -->
+<!-- 			<version>1.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Users\JuanMa\Gibran\SistemaDigitalizacion\PRUEBAS_MATLAB\pruebasConJAVA\Tecloprocessing13\for_testing\Tecloprocessing13.jar</systemPath>  -->
+<!-- 		</dependency> -->
+<!-- 		<dependency>  -->
+<!-- 			<groupId>com.tecloprocessing</groupId>  -->
+<!-- 			<artifactId>sampletp</artifactId>  -->
+<!-- 			<version>1.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Users\JuanMa\Gibran\SistemaDigitalizacion\VERSIONES\jarsX32\omr\Tecloprocessing13.jar</systemPath>  -->
+<!-- 		</dependency> -->
+<!-- 		<dependency>  -->
+<!-- 			<groupId>com.tecloprocessing</groupId>  -->
+<!-- 			<artifactId>sampletp</artifactId>  -->
+<!-- 			<version>1.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Users\JuanMa\Gibran\SistemaDigitalizacion\Processing_Matlab\Tecloprocessing14\for_redistribution_files_only\Tecloprocessing14.jar</systemPath>  -->
+<!-- 		</dependency> -->
+		<dependency> 		
+			<groupId>com.teclomr</groupId>
+			<artifactId>omr</artifactId>
+			<version>1.0.0</version> 
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.tecloprocessing</groupId>  -->
+<!-- 			<artifactId>sampletp</artifactId>  -->
+<!-- 			<version>1.0</version>  -->
+<!-- 			<scope>system</scope>  -->
+<!-- 			<systemPath>C:\Users\JuanMa\Gibran\SistemaDigitalizacion\VERSIONES\jarsX64\Tecloprocessing13.jar</systemPath>  -->
+<!-- 		</dependency> -->
+	</dependencies>
+
+</project>

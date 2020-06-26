@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>digitalizacion-scanner</artifactId>
+	<packaging>jar</packaging>
+	<name>digitalizacion-scanneralizacion-scanner</name>
+	<description></description>
+
+	<parent>
+		<groupId>mx.com.teclo</groupId>
+		<artifactId>digitalizacion-procesamiento-build</artifactId>
+		<version>${revision}</version>
+		<!-- <relativePath>..</relativePath> lookup parent from repository -->
+	</parent>
+ 
+
+	<dependencies>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-base</artifactId>
+			<version>${revision}</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.fujitsu.pfu.fiscn.sdk</groupId> -->
+<!-- 			<artifactId>fujitsu-sdk</artifactId> -->
+<!-- 			<version>1.0.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.fujitsu.pfu.fiscn.sdk</groupId> -->
+<!-- 			<artifactId>fujitsu-sdk32</artifactId> -->
+<!-- 			<version>1.0.0</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> <groupId>com.fujitsu.pfu.fiscn.sdk</groupId> <artifactId>fujitsuSDK</artifactId>  -->
+<!-- 			<version>1.0</version> <scope>system</scope> <systemPath>C:\Program Files\FiScnSDK22\Fiscn.jar</systemPath>  -->
+<!-- 			</dependency> -->
+<!-- 		<dependency> <groupId>mx.scann.connector</groupId> <artifactId>scanConnector</artifactId>  -->
+<!-- 			<version>1.0</version> <scope>system</scope> <systemPath>C:\Users\JuanMa\Gibran\All-about-SAI\Generacion_XMLs\ScanNoe3\dist\ScanNoe3.jar</systemPath>  -->
+<!-- 			</dependency> -->
+	</dependencies>
+
+</project>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>digitalizacion-app</artifactId>
+	<version>${version.app}</version>
+	<packaging>jar</packaging>
+	<name>digitalizacion-app</name>
+
+	<parent>
+		<groupId>mx.com.teclo</groupId>
+		<artifactId>digitalizacion-procesamiento-build</artifactId>
+		<version>${revision}</version>
+		<relativePath>..</relativePath> <!-- lookup parent from repository -->
+	</parent>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-base</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-restclient</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-omr</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		<dependency>
+			<groupId>mx.com.teclo</groupId>
+			<artifactId>digitalizacion-scanner</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.toedter/jcalendar -->
+		<dependency>
+		    <groupId>com.toedter</groupId>
+		    <artifactId>jcalendar</artifactId>
+		    <version>1.4</version>
+		</dependency>	
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${name-war}-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+ 									<manifestEntries>
+ 										<Main-Class>mx.com.frames.ConsultaLotesFrame</Main-Class>
+ 										<Permissions>all-permissions</Permissions>
+ 										</manifestEntries>
+ 								</transformer>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+									<resource>META-INF/spring.handlers</resource>
+								</transformer>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+									<resource>META-INF/spring.schemas</resource>
+								</transformer>
+							</transformers>
+ 
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>sign</id>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<keystore>src/main/resources/keystore/portal_teclo_mx.jks</keystore>
+					<alias>server</alias>
+					<storepass>Teclo2018</storepass>
+					<keypass>Teclo2018</keypass>
+					<verify>true</verify>
+
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
